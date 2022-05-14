@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdPostActivity">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="190dp"
+        android:height="30dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_titel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <EditText
+        android:id="@+id/edit_titel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:width="270dp"
+        android:height="40dp"
+        android:background="@drawable/edittextborder"
+        android:ems="20"
+        android:hint="Enter Ad Titel"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:width="270dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="Enter Description"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    android:onClick="SetVal"-->
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:width="270dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="Enter Price"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:width="270dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="Enter Image Url"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:width="240dp"
+        android:height="10dp"
+        android:background="@drawable/my_button"
+        android:text="Post now"
+        android:onClick="PostNow"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_post"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="HomePage"
+            android:layout_marginHorizontal="4dp"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/btn_f_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:onClick="AdPostPage"
+            android:text="Post"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ProfilePage"
+            android:layout_marginHorizontal="4dp"
+            android:text="Profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
