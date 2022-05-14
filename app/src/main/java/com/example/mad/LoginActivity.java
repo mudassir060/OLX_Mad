@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
 //        DB = new DBHelper(this);
 //        Intent intent =new Intent(this,HomeActivity.class);
     }
+
     public  void SetVal(View view){
         TextView setf_name = findViewById(R.id.Textf_name);
         TextView set_password = findViewById(R.id.Textage);
@@ -39,6 +40,23 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void SignIn(View view){
+        EditText editTextF_Name = findViewById(R.id.editTextemail);
+        EditText editText_password = findViewById(R.id.editTextage);
+        if(!editTextF_Name.getText().toString().isEmpty()){
+            if(!editText_password.getText().toString().isEmpty()){
+                if (editTextF_Name.getText().toString() == "xyz@gmail.com"){
+                    Intent  intent =new Intent(this,HomeActivity.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(this, "Enter Correct Passoword", Toast.LENGTH_SHORT).show();
+                }
+            }else {
+                Toast.makeText(this, "Please Enter Password", Toast.LENGTH_SHORT).show();
+            }
+        }else {
+            Toast.makeText(this, "Please Enter email", Toast.LENGTH_SHORT).show();
+        }
+
 //        Cursor res = DB.view();
 //        if (res.getCount()==0){
 //            Toast.makeText(this, "NO Entry exist", Toast.LENGTH_SHORT).show();
@@ -60,8 +78,8 @@ public class LoginActivity extends AppCompatActivity {
 //            Intent  intent =new Intent(this,Signup_activity.class);
 //            startActivity(intent);
 //        }else {
-        Intent  intent =new Intent(this,AdPostActivity.class);
-        startActivity(intent);
+//        Intent  intent =new Intent(this,HomeActivity.class);
+//        startActivity(intent);
 //        }
     }
 }
